@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="6.166" errors="5" skipped="0" tests="5" name="org.seckill.service.SeckillServiceTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\bin"/>
+    <property name="java.vm.version" value="24.65-b04"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="$MAVEN_HOME"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\项目开发文档\project\trunk"/>
+    <property name="java.runtime.version" value="1.7.0_67-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_67\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\java\myProjects\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf211273754286346347.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_67\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\TortoiseSVN\bin;D:\SQL Server\Microsoft SQL Server\100\Tools\Binn\;D:\SQL Server\server\100\Tools\Binn\;D:\SQL Server\server\100\DTS\Binn\;D:\SQL Server\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;D:\SQL Server\Microsoft SQL Server\100\DTS\Binn\;D:\developers\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;D:\developers\apache-maven-3.3.3\bin;C:\Users\Administrator\AppData\Roaming\npm;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="java.class.path" value="D:\developers\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="debug"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_67\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -B -X -e -s C:\Users\Administrator\.m2\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_67"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_67\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_67\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\developers\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="2.091" classname="org.seckill.service.SeckillServiceTest" name="testExecuteSeckillProcedure">
+    <error message="nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out." type="org.mybatis.spring.MyBatisSystemException">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:76)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy13.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:165)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:69)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy14.queryById(Unknown Source)
+	at org.seckill.service.impl.SeckillServiceImpl.exportSeckillUrl(SeckillServiceImpl.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201)
+	at com.sun.proxy.$Proxy21.exportSeckillUrl(Unknown Source)
+	at org.seckill.service.SeckillServiceTest.testExecuteSeckillProcedure(SeckillServiceTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 49 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:315)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 56 more
+Caused by: java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:65)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:527)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 66 more
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@b64c9d9 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1317)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525)
+	... 69 more
+</error>
+    <system-out>11:25:53.171 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Find JAR URL: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity
+11:25:53.171 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Not a JAR: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity
+11:25:53.172 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Reader entry: Seckill.class
+11:25:53.172 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Reader entry: SuccessKilled.class
+11:25:53.172 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Listing file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity
+11:25:53.172 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Find JAR URL: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity/Seckill.class
+11:25:53.173 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Not a JAR: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity/Seckill.class
+11:25:53.173 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;]&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#26;org/seckill/entity/Seckill&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	seckillId&amp;#1;&amp;#0;&amp;#1;J&amp;#1;&amp;#0;&amp;#4;name&amp;#1;&amp;#0;&amp;#18;Ljava/lang/String;&amp;#1;&amp;#0;&amp;#6;number&amp;#1;&amp;#0;&amp;#1;I&amp;#1;&amp;#0;	startTime&amp;#1;&amp;#0;&amp;#16;Ljava/util/Date;&amp;#1;&amp;#0;&amp;#7;endTime&amp;#1;&amp;#0;
+11:25:53.173 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Find JAR URL: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity/SuccessKilled.class
+11:25:53.173 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Not a JAR: file:/E:/%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e6%96%87%e6%a1%a3/project/trunk/target/classes/org/seckill/entity/SuccessKilled.class
+11:25:53.174 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;V&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0; org/seckill/entity/SuccessKilled&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	seckillId&amp;#1;&amp;#0;&amp;#1;J&amp;#1;&amp;#0;	userPhone&amp;#1;&amp;#0;&amp;#5;state&amp;#1;&amp;#0;&amp;#1;S&amp;#1;&amp;#0;
+11:25:53.174 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class org.seckill.entity.Seckill matches criteria [is assignable to Object]
+11:25:53.174 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class org.seckill.entity.SuccessKilled matches criteria [is assignable to Object]
+11:25:53.174 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Scanned package: &apos;org.seckill.entity&apos; for aliases
+11:25:53.183 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed configuration file: &apos;class path resource [mybatis-config.xml]&apos;
+11:25:53.197 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: &apos;file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]&apos;
+11:25:53.208 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: &apos;file [E:\项目开发文档\project\trunk\target\classes\mapper\SuccessKilledDao.xml]&apos;
+11:25:54.329 [main] ERROR org.seckill.dao.cache.RedisDao - Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:50) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:99) ~[jedis-2.7.3.jar:na]
+	at org.seckill.dao.cache.RedisDao.getSeckill(RedisDao.java:32) ~[classes/:na]
+	at org.seckill.service.impl.SeckillServiceImpl.exportSeckillUrl(SeckillServiceImpl.java:65) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317) [spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201) [spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at com.sun.proxy.$Proxy21.exportSeckillUrl(Unknown Source) [na:na]
+	at org.seckill.service.SeckillServiceTest.testExecuteSeckillProcedure(SeckillServiceTest.java:97) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:164) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:82) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1641) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:85) ~[jedis-2.7.3.jar:na]
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:861) ~[commons-pool2-2.3.jar:2.3]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435) ~[commons-pool2-2.3.jar:2.3]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363) ~[commons-pool2-2.3.jar:2.3]
+	at redis.clients.util.Pool.getResource(Pool.java:48) ~[jedis-2.7.3.jar:na]
+	... 46 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.7.0_67]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_67]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.7.0_67]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.7.0_67]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_67]
+	at redis.clients.jedis.Connection.connect(Connection.java:158) ~[jedis-2.7.3.jar:na]
+	... 53 common frames omitted
+11:25:54.330 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+11:25:54.331 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@653e266e] was not registered for synchronization because synchronization is not active
+11:25:55.364 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@653e266e]
+</system-out>
+    <system-err>九月 13, 2016 11:25:52 上午 org.springframework.test.context.support.DefaultTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+信息: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+九月 13, 2016 11:25:52 上午 org.springframework.test.context.support.DefaultTestContextBootstrapper getTestExecutionListeners
+信息: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28e57889, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@714c7f58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@553ca484, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5501d4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4ceb0577]
+九月 13, 2016 11:25:52 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [spring/spring-dao.xml]
+九月 13, 2016 11:25:52 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@193ac3a5 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:53 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [spring/spring-service.xml]
+九月 13, 2016 11:25:53 上午 org.springframework.context.support.GenericApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.GenericApplicationContext@59b3ef14: startup date [Tue Sep 13 11:25:53 CST 2016]; root of context hierarchy
+九月 13, 2016 11:25:53 上午 org.springframework.context.support.PropertySourcesPlaceholderConfigurer loadProperties
+信息: Loading properties file from class path resource [jdbc.properties]
+九月 13, 2016 11:25:53 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@557597b7 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:54 上午 com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+信息: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 3, acquireRetryAttempts -&gt; 2, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 1000, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1hgeas59j9bewdz1f4j6c3|3fdc86ed, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; com.mysql.jdbc.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1hgeas59j9bewdz1f4j6c3|3fdc86ed, idleConnectionTestPeriod -&gt; 0, initialPoolSize -&gt; 3, jdbcUrl -&gt; jdbc:mysql://127.0.0.1:3306/seckill?useUnicode=true&amp;characterEncoding=utf8, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 0, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 30, maxStatements -&gt; 0, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 10, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; null, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]
+九月 13, 2016 11:25:55 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7da612aa -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:55 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@343523e2 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+</system-err>
+  </testcase>
+  <testcase time="1.023" classname="org.seckill.service.SeckillServiceTest" name="testExportSeckillUrl">
+    <error message="nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!" type="org.mybatis.spring.MyBatisSystemException">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:76)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy13.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:165)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:69)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy14.queryById(Unknown Source)
+	at org.seckill.service.impl.SeckillServiceImpl.exportSeckillUrl(SeckillServiceImpl.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201)
+	at com.sun.proxy.$Proxy21.exportSeckillUrl(Unknown Source)
+	at org.seckill.service.SeckillServiceTest.testExportSeckillUrl(SeckillServiceTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 49 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:315)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 56 more
+Caused by: java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:529)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 66 more
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1319)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525)
+	... 69 more
+</error>
+    <system-out>11:25:56.382 [main] ERROR org.seckill.dao.cache.RedisDao - Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:50) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:99) ~[jedis-2.7.3.jar:na]
+	at org.seckill.dao.cache.RedisDao.getSeckill(RedisDao.java:32) ~[classes/:na]
+	at org.seckill.service.impl.SeckillServiceImpl.exportSeckillUrl(SeckillServiceImpl.java:65) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317) [spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201) [spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at com.sun.proxy.$Proxy21.exportSeckillUrl(Unknown Source) [na:na]
+	at org.seckill.service.SeckillServiceTest.testExportSeckillUrl(SeckillServiceTest.java:51) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163) [spring-test-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_67]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_67]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_67]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_67]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:164) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:82) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1641) ~[jedis-2.7.3.jar:na]
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:85) ~[jedis-2.7.3.jar:na]
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:861) ~[commons-pool2-2.3.jar:2.3]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435) ~[commons-pool2-2.3.jar:2.3]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363) ~[commons-pool2-2.3.jar:2.3]
+	at redis.clients.util.Pool.getResource(Pool.java:48) ~[jedis-2.7.3.jar:na]
+	... 46 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.7.0_67]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_67]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_67]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.7.0_67]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.7.0_67]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_67]
+	at redis.clients.jedis.Connection.connect(Connection.java:158) ~[jedis-2.7.3.jar:na]
+	... 53 common frames omitted
+11:25:56.383 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+11:25:56.384 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@784d0d4b] was not registered for synchronization because synchronization is not active
+11:25:56.390 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@784d0d4b]
+</system-out>
+    <system-err>九月 13, 2016 11:25:55 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@39226771 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:56 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@a7bc66b -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:56 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@aa3f4a1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+</system-err>
+  </testcase>
+  <testcase time="1.008" classname="org.seckill.service.SeckillServiceTest" name="testGetById">
+    <error message="nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!" type="org.mybatis.spring.MyBatisSystemException">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:76)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy13.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:165)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:69)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy14.queryById(Unknown Source)
+	at org.seckill.service.impl.SeckillServiceImpl.getById(SeckillServiceImpl.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201)
+	at com.sun.proxy.$Proxy21.getById(Unknown Source)
+	at org.seckill.service.SeckillServiceTest.testGetById(SeckillServiceTest.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryById
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 49 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:315)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 56 more
+Caused by: java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:529)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 66 more
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1319)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525)
+	... 69 more
+</error>
+    <system-out>11:25:56.397 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+11:25:56.397 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34dff4af] was not registered for synchronization because synchronization is not active
+11:25:57.398 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34dff4af]
+</system-out>
+    <system-err>九月 13, 2016 11:25:56 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@7477c4b7 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:57 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5837c1b -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+</system-err>
+  </testcase>
+  <testcase time="1.012" classname="org.seckill.service.SeckillServiceTest" name="testExecuteSeckill">
+    <error message="Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:245)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:463)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:276)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy21.executeSeckill(Unknown Source)
+	at org.seckill.service.SeckillServiceTest.testExecuteSeckill(SeckillServiceTest.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:529)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:204)
+	... 43 more
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1319)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525)
+	... 45 more
+</error>
+    <system-err>九月 13, 2016 11:25:57 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@44091cfd -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:57 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@5b77a8d8 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:58 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@3b5589db -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+</system-err>
+  </testcase>
+  <testcase time="1.032" classname="org.seckill.service.SeckillServiceTest" name="testGetSeckillList">
+    <error message="nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryAll
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out." type="org.mybatis.spring.MyBatisSystemException">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryAll
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:76)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:399)
+	at com.sun.proxy.$Proxy13.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:122)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:64)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy14.queryAll(Unknown Source)
+	at org.seckill.service.impl.SeckillServiceImpl.getSeckillList(SeckillServiceImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201)
+	at com.sun.proxy.$Proxy21.getSeckillList(Unknown Source)
+	at org.seckill.service.SeckillServiceTest.testGetSeckillList(SeckillServiceTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+### The error may exist in file [E:\项目开发文档\project\trunk\target\classes\mapper\SeckillDao.xml]
+### The error may involve org.seckill.dao.SeckillDao.queryAll
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:122)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	... 50 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:315)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:303)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:154)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:102)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:82)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:120)
+	... 56 more
+Caused by: java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:65)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:527)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 66 more
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@b64c9d9 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1317)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525)
+	... 69 more
+</error>
+    <system-out>11:25:58.418 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+11:25:58.418 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75830b41] was not registered for synchronization because synchronization is not active
+11:25:59.439 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75830b41]
+</system-out>
+    <system-err>九月 13, 2016 11:25:59 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@6e5814ac -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:59 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@50e17c3c -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+九月 13, 2016 11:25:59 上午 com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask run
+警告: com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask@58b560cc -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (2). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database &apos;seckill&apos;
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+</system-err>
+  </testcase>
+</testsuite>
