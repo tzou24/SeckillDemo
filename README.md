@@ -1,4 +1,17 @@
 # SeckillDemo project and testDemo about SOA 
+
+##包含商城秒杀项目
+	redis 缓存数据；
+	restful 风格请求url；
+	dto 返回对象；
+	js 秒杀场景模块化；
+##org.cckj.*  包下包含：
+	验证文件类型 工具类；
+	套接字传输信息，客户端和服务端；
+	序列化的几种方式；
+	rpc(远程服务调用) http/tcp；
+	(分布式场景下) zookeeper对多服务器的配置， 轮询调用；
+	数字签名对数据完整性和唯一性进行校验。 
 java 高并发处理项目
 SpringMVC+Spring+mybatis
 
@@ -17,9 +30,6 @@ SpringMVC+Spring+mybatis
                   开发成本：数据一致性，回滚方案
                   幂等性难保证：重复秒杀
                   不适合新手
-
-
-
 
 瓶颈分析:          update 减库存
                     |
